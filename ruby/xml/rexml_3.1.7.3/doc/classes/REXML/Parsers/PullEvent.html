@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: REXML::Parsers::PullEvent</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">REXML::Parsers::PullEvent</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/temp/parsers/pullparser_rb.html">
+                temp/parsers/pullparser.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="../../Object.html">
+                Object
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+A parsing event. The contents of the event are accessed as an +<a
+href="../../Array.html">Array</a>?, and the type is given either by the
+&#8230;? methods, or by accessing the <tt>type</tt> accessor. The contents
+of this object vary from event to event, but are identical to the arguments
+passed to +<a href="../StreamListener.html">StreamListener</a>+s for each
+event.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000108">[]</a>&nbsp;&nbsp;
+      <a href="#M000116">attlistdecl?</a>&nbsp;&nbsp;
+      <a href="#M000121">cdata?</a>&nbsp;&nbsp;
+      <a href="#M000114">comment?</a>&nbsp;&nbsp;
+      <a href="#M000115">doctype?</a>&nbsp;&nbsp;
+      <a href="#M000117">elementdecl?</a>&nbsp;&nbsp;
+      <a href="#M000111">end_element?</a>&nbsp;&nbsp;
+      <a href="#M000120">entity?</a>&nbsp;&nbsp;
+      <a href="#M000118">entitydecl?</a>&nbsp;&nbsp;
+      <a href="#M000123">error?</a>&nbsp;&nbsp;
+      <a href="#M000109">event_type</a>&nbsp;&nbsp;
+      <a href="#M000124">inspect</a>&nbsp;&nbsp;
+      <a href="#M000113">instruction?</a>&nbsp;&nbsp;
+      <a href="#M000107">new</a>&nbsp;&nbsp;
+      <a href="#M000119">notationdecl?</a>&nbsp;&nbsp;
+      <a href="#M000110">start_element?</a>&nbsp;&nbsp;
+      <a href="#M000112">text?</a>&nbsp;&nbsp;
+      <a href="#M000122">xmldecl?</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000107" class="method-detail">
+        <a name="M000107"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000107.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000107.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(arg)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The type of this event. Will be one of :tag_start, :tag_end, :text,
+:processing_instruction, :comment, :doctype, :attlistdecl, :entitydecl,
+:notationdecl, :entity, :cdata, :xmldecl, or :error.
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000108" class="method-detail">
+        <a name="M000108"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000108.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000108.html');return false;">
+          <span class="method-name">[]</span><span class="method-args">( start, endd=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000116" class="method-detail">
+        <a name="M000116"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000116.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000116.html');return false;">
+          <span class="method-name">attlistdecl?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String text ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000121" class="method-detail">
+        <a name="M000121"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000121.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000121.html');return false;">
+          <span class="method-name">cdata?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String text ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000114" class="method-detail">
+        <a name="M000114"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000114.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000114.html');return false;">
+          <span class="method-name">comment?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String text ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000115" class="method-detail">
+        <a name="M000115"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000115.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000115.html');return false;">
+          <span class="method-name">doctype?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String name, String pub_sys, String long_name, String uri ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000117" class="method-detail">
+        <a name="M000117"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000117.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000117.html');return false;">
+          <span class="method-name">elementdecl?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String text ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000111" class="method-detail">
+        <a name="M000111"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000111.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000111.html');return false;">
+          <span class="method-name">end_element?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String tag_name ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000120" class="method-detail">
+        <a name="M000120"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000120.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000120.html');return false;">
+          <span class="method-name">entity?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String text ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000118" class="method-detail">
+        <a name="M000118"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000118.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000118.html');return false;">
+          <span class="method-name">entitydecl?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Due to the wonders of DTDs, an entity declaration can be just about
+anything. There&#8216;s no way to normalize it; you&#8216;ll have to
+interpret the content yourself. However, the following is true:
+</p>
+<ul>
+<li>If the entity declaration is an internal entity: [ String name, String
+value ]
+
+</li>
+</ul>
+<p>
+Content: [ String text ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000123" class="method-detail">
+        <a name="M000123"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000123.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000123.html');return false;">
+          <span class="method-name">error?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000109" class="method-detail">
+        <a name="M000109"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000109.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000109.html');return false;">
+          <span class="method-name">event_type</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000124" class="method-detail">
+        <a name="M000124"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000124.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000124.html');return false;">
+          <span class="method-name">inspect</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000113" class="method-detail">
+        <a name="M000113"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000113.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000113.html');return false;">
+          <span class="method-name">instruction?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String text ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000119" class="method-detail">
+        <a name="M000119"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000119.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000119.html');return false;">
+          <span class="method-name">notationdecl?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String text ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000110" class="method-detail">
+        <a name="M000110"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000110.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000110.html');return false;">
+          <span class="method-name">start_element?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String tag_name, Hash attributes ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000112" class="method-detail">
+        <a name="M000112"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000112.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000112.html');return false;">
+          <span class="method-name">text?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String raw_text, String unnormalized_text ]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000122" class="method-detail">
+        <a name="M000122"></a>
+
+        <div class="method-heading">
+          <a href="PullEvent.src/M000122.html" target="Code" class="method-signature"
+            onclick="popupCode('PullEvent.src/M000122.html');return false;">
+          <span class="method-name">xmldecl?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Content: [ String version, String encoding, String standalone ]
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

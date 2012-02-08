@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: REXML::Attributes</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">REXML::Attributes</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/temp/element_rb.html">
+                temp/element.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Hash
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+A class that defines the set of <a href="Attributes.html">Attributes</a> of
+an <a href="Element.html">Element</a> and provides operations for accessing
+elements in that set.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000414">&lt;&lt;</a>&nbsp;&nbsp;
+      <a href="#M000402">[]</a>&nbsp;&nbsp;
+      <a href="#M000409">[]=</a>&nbsp;&nbsp;
+      <a href="#M000413">add</a>&nbsp;&nbsp;
+      <a href="#M000412">delete</a>&nbsp;&nbsp;
+      <a href="#M000415">delete_all</a>&nbsp;&nbsp;
+      <a href="#M000407">each</a>&nbsp;&nbsp;
+      <a href="#M000406">each_attribute</a>&nbsp;&nbsp;
+      <a href="#M000408">get_attribute</a>&nbsp;&nbsp;
+      <a href="#M000416">get_attribute_ns</a>&nbsp;&nbsp;
+      <a href="#M000404">length</a>&nbsp;&nbsp;
+      <a href="#M000411">namespaces</a>&nbsp;&nbsp;
+      <a href="#M000401">new</a>&nbsp;&nbsp;
+      <a href="#M000410">prefixes</a>&nbsp;&nbsp;
+      <a href="#M000405">size</a>&nbsp;&nbsp;
+      <a href="#M000403">to_a</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000401" class="method-detail">
+        <a name="M000401"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000401.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000401.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(element)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Constructor
+</p>
+<table>
+<tr><td valign="top">element:</td><td>the <a href="Element.html">Element</a> of which this is an <a
+href="Attribute.html">Attribute</a>
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000414" class="method-detail">
+        <a name="M000414"></a>
+
+        <div class="method-heading">
+          <span class="method-name">&lt;&lt;</span><span class="method-args">( attribute )</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Attributes.html#M000413">add</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000402" class="method-detail">
+        <a name="M000402"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000402.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000402.html');return false;">
+          <span class="method-name">[]</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fetches an attribute value. If you want to get the <a
+href="Attribute.html">Attribute</a> itself, use <a
+href="Attributes.html#M000408">get_attribute</a>()
+</p>
+<table>
+<tr><td valign="top">name:</td><td>an <a href="XPath.html">XPath</a> attribute name. Namespaces are relevant
+here.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>the String value of the matching attribute, or <tt>nil</tt> if no matching
+attribute was found. This is the unnormalized value (with entities
+expanded).
+
+</td></tr>
+</table>
+<pre>
+ doc = Document.new &quot;&lt;a foo:att='1' bar:att='2' att='&amp;lt;'/&gt;&quot;
+ doc.root.attributes['att']         #-&gt; '&lt;'
+ doc.root.attributes['bar:att']     #-&gt; '2'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000409" class="method-detail">
+        <a name="M000409"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000409.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000409.html');return false;">
+          <span class="method-name">[]=</span><span class="method-args">( name, value )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets an attribute, overwriting any existing attribute value by the same
+name. <a href="Namespace.html">Namespace</a> is significant.
+</p>
+<table>
+<tr><td valign="top">name:</td><td>the name of the attribute
+
+</td></tr>
+<tr><td valign="top">value:</td><td>(optional) If supplied, the value of the attribute. If nil, any existing
+matching attribute is deleted.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>Owning element
+
+</td></tr>
+</table>
+<pre>
+ doc = Document.new &quot;&lt;a x:foo='1' foo='3'/&gt;&quot;
+ doc.root.attributes['y:foo'] = '2'
+ doc.root.attributes['foo'] = '4'
+ doc.root.attributes['x:foo'] = nil
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000413" class="method-detail">
+        <a name="M000413"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000413.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000413.html');return false;">
+          <span class="method-name">add</span><span class="method-args">( attribute )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Adds an attribute, overriding any existing attribute by the same name.
+Namespaces are significant.
+</p>
+<table>
+<tr><td valign="top">attribute:</td><td>An <a href="Attribute.html">Attribute</a>
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000412" class="method-detail">
+        <a name="M000412"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000412.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000412.html');return false;">
+          <span class="method-name">delete</span><span class="method-args">( attribute )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Removes an attribute
+</p>
+<table>
+<tr><td valign="top">attribute:</td><td>either a String, which is the name of the attribute to remove &#8212; <a
+href="Attributes.html#M000411">namespaces</a> are significant here &#8212;
+or the attribute to remove.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>the owning element
+
+</td></tr>
+</table>
+<pre>
+ doc = Document.new &quot;&lt;a y:foo='0' x:foo='1' foo='3' z:foo='4'/&gt;&quot;
+ doc.root.attributes.delete 'foo'   #-&gt; &lt;a y:foo='0' x:foo='1' z:foo='4'/&gt;&quot;
+ doc.root.attributes.delete 'x:foo' #-&gt; &lt;a y:foo='0' z:foo='4'/&gt;&quot;
+ attr = doc.root.attributes.get_attribute('y:foo')
+ doc.root.attributes.delete attr    #-&gt; &lt;a z:foo='4'/&gt;&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000415" class="method-detail">
+        <a name="M000415"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000415.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000415.html');return false;">
+          <span class="method-name">delete_all</span><span class="method-args">( name )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Deletes all attributes matching a name. Namespaces are significant.
+</p>
+<table>
+<tr><td valign="top">name:</td><td>A String; all attributes that match this path will be removed
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>an <a href="../Array.html">Array</a> of the <a
+href="Attributes.html">Attributes</a> that were removed
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000407" class="method-detail">
+        <a name="M000407"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000407.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000407.html');return false;">
+          <span class="method-name">each</span><span class="method-args">() {|[attr.expanded_name, attr.value]| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Itterates over <a href="Attributes.html#M000407">each</a> attribute of an
+<a href="Element.html">Element</a>, yielding the expanded name and value as
+a pair of Strings.
+</p>
+<pre>
+ doc = Document.new '&lt;a x=&quot;1&quot; y=&quot;2&quot;/&gt;'
+ doc.root.attributes.each {|name, value| p name+&quot; =&gt; &quot;+value }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000406" class="method-detail">
+        <a name="M000406"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000406.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000406.html');return false;">
+          <span class="method-name">each_attribute</span><span class="method-args">( {|attribute| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Itterates over the attributes of an <a href="Element.html">Element</a>.
+Yields actual <a href="Attribute.html">Attribute</a> nodes, not String
+values.
+</p>
+<pre>
+ doc = Document.new '&lt;a x=&quot;1&quot; y=&quot;2&quot;/&gt;'
+ doc.root.attributes.each_attribute {|attr|
+   p attr.expanded_name+&quot; =&gt; &quot;+attr.value
+ }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000408" class="method-detail">
+        <a name="M000408"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000408.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000408.html');return false;">
+          <span class="method-name">get_attribute</span><span class="method-args">( name )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fetches an attribute
+</p>
+<table>
+<tr><td valign="top">name:</td><td>the name by which to search for the attribute. Can be a
+<tt>prefix:name</tt> namespace name.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>The first matching attribute, or nil if there was none. This
+
+</td></tr>
+</table>
+<p>
+value is an <a href="Attribute.html">Attribute</a> node, not the String
+value of the attribute.
+</p>
+<pre>
+ doc = Document.new '&lt;a x:foo=&quot;1&quot; foo=&quot;2&quot; bar=&quot;3&quot;/&gt;'
+ doc.root.attributes.get_attribute(&quot;foo&quot;).value    #-&gt; &quot;2&quot;
+ doc.root.attributes.get_attribute(&quot;x:foo&quot;).value  #-&gt; &quot;1&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000416" class="method-detail">
+        <a name="M000416"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000416.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000416.html');return false;">
+          <span class="method-name">get_attribute_ns</span><span class="method-args">(namespace, name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The <tt><a href="Attributes.html#M000416">get_attribute_ns</a></tt> method
+retrieves a method by its namespace and name. Thus it is possible to
+reliably identify an attribute even if an XML processor has changed the
+prefix.
+</p>
+<p>
+Method contributed by Henrik Martensson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000404" class="method-detail">
+        <a name="M000404"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000404.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000404.html');return false;">
+          <span class="method-name">length</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the number of attributes the owning <a
+href="Element.html">Element</a> contains.
+</p>
+<pre>
+ doc = Document &quot;&lt;a x='1' y='2' foo:x='3'/&gt;&quot;
+ doc.root.attributes.length        #-&gt; 3
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000411" class="method-detail">
+        <a name="M000411"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000411.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000411.html');return false;">
+          <span class="method-name">namespaces</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000410" class="method-detail">
+        <a name="M000410"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000410.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000410.html');return false;">
+          <span class="method-name">prefixes</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an array of Strings containing all of the <a
+href="Attributes.html#M000410">prefixes</a> declared by this set of #
+attributes. The array does not include the default namespace declaration,
+if one exists.
+</p>
+<pre>
+ doc = Document.new(&quot;&lt;a xmlns='foo' xmlns:x='bar' xmlns:y='twee' &quot;+
+       &quot;z='glorp' p:k='gru'/&gt;&quot;)
+ prefixes = doc.root.attributes.prefixes    #-&gt; ['x', 'y']
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000405" class="method-detail">
+        <a name="M000405"></a>
+
+        <div class="method-heading">
+          <span class="method-name">size</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Attributes.html#M000404">length</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000403" class="method-detail">
+        <a name="M000403"></a>
+
+        <div class="method-heading">
+          <a href="Attributes.src/M000403.html" target="Code" class="method-signature"
+            onclick="popupCode('Attributes.src/M000403.html');return false;">
+          <span class="method-name">to_a</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: REXML</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">REXML</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/temp/comment_rb.html">
+                temp/comment.rb
+                </a>
+        <br />
+                <a href="../files/temp/dtd/attlistdecl_rb.html">
+                temp/dtd/attlistdecl.rb
+                </a>
+        <br />
+                <a href="../files/temp/dtd/notationdecl_rb.html">
+                temp/dtd/notationdecl.rb
+                </a>
+        <br />
+                <a href="../files/temp/dtd/elementdecl_rb.html">
+                temp/dtd/elementdecl.rb
+                </a>
+        <br />
+                <a href="../files/temp/dtd/dtd_rb.html">
+                temp/dtd/dtd.rb
+                </a>
+        <br />
+                <a href="../files/temp/dtd/entitydecl_rb.html">
+                temp/dtd/entitydecl.rb
+                </a>
+        <br />
+                <a href="../files/temp/doctype_rb.html">
+                temp/doctype.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/UTF-8_rb.html">
+                temp/encodings/UTF-8.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/ISO-8859-15_rb.html">
+                temp/encodings/ISO-8859-15.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/ISO-8859-1_rb.html">
+                temp/encodings/ISO-8859-1.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/CP-1252_rb.html">
+                temp/encodings/CP-1252.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/UNILE_rb.html">
+                temp/encodings/UNILE.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/US-ASCII_rb.html">
+                temp/encodings/US-ASCII.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/SHIFT-JIS_rb.html">
+                temp/encodings/SHIFT-JIS.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/UTF-16_rb.html">
+                temp/encodings/UTF-16.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/EUC-JP_rb.html">
+                temp/encodings/EUC-JP.rb
+                </a>
+        <br />
+                <a href="../files/temp/encodings/ICONV_rb.html">
+                temp/encodings/ICONV.rb
+                </a>
+        <br />
+                <a href="../files/temp/validation/relaxng_rb.html">
+                temp/validation/relaxng.rb
+                </a>
+        <br />
+                <a href="../files/temp/validation/validation_rb.html">
+                temp/validation/validation.rb
+                </a>
+        <br />
+                <a href="../files/temp/validation/validationexception_rb.html">
+                temp/validation/validationexception.rb
+                </a>
+        <br />
+                <a href="../files/temp/text_rb.html">
+                temp/text.rb
+                </a>
+        <br />
+                <a href="../files/temp/rexml_rb.html">
+                temp/rexml.rb
+                </a>
+        <br />
+                <a href="../files/temp/quickpath_rb.html">
+                temp/quickpath.rb
+                </a>
+        <br />
+                <a href="../files/temp/document_rb.html">
+                temp/document.rb
+                </a>
+        <br />
+                <a href="../files/temp/xmldecl_rb.html">
+                temp/xmldecl.rb
+                </a>
+        <br />
+                <a href="../files/temp/xpath_rb.html">
+                temp/xpath.rb
+                </a>
+        <br />
+                <a href="../files/temp/child_rb.html">
+                temp/child.rb
+                </a>
+        <br />
+                <a href="../files/temp/parsers/streamparser_rb.html">
+                temp/parsers/streamparser.rb
+                </a>
+        <br />
+                <a href="../files/temp/parsers/sax2parser_rb.html">
+                temp/parsers/sax2parser.rb
+                </a>
+        <br />
+                <a href="../files/temp/parsers/lightparser_rb.html">
+                temp/parsers/lightparser.rb
+                </a>
+        <br />
+                <a href="../files/temp/parsers/treeparser_rb.html">
+                temp/parsers/treeparser.rb
+                </a>
+        <br />
+                <a href="../files/temp/parsers/xpathparser_rb.html">
+                temp/parsers/xpathparser.rb
+                </a>
+        <br />
+                <a href="../files/temp/parsers/pullparser_rb.html">
+                temp/parsers/pullparser.rb
+                </a>
+        <br />
+                <a href="../files/temp/parsers/ultralightparser_rb.html">
+                temp/parsers/ultralightparser.rb
+                </a>
+        <br />
+                <a href="../files/temp/parsers/baseparser_rb.html">
+                temp/parsers/baseparser.rb
+                </a>
+        <br />
+                <a href="../files/temp/functions_rb.html">
+                temp/functions.rb
+                </a>
+        <br />
+                <a href="../files/temp/sax2listener_rb.html">
+                temp/sax2listener.rb
+                </a>
+        <br />
+                <a href="../files/temp/light/node_rb.html">
+                temp/light/node.rb
+                </a>
+        <br />
+                <a href="../files/temp/parseexception_rb.html">
+                temp/parseexception.rb
+                </a>
+        <br />
+                <a href="../files/temp/undefinednamespaceexception_rb.html">
+                temp/undefinednamespaceexception.rb
+                </a>
+        <br />
+                <a href="../files/temp/streamlistener_rb.html">
+                temp/streamlistener.rb
+                </a>
+        <br />
+                <a href="../files/temp/namespace_rb.html">
+                temp/namespace.rb
+                </a>
+        <br />
+                <a href="../files/temp/element_rb.html">
+                temp/element.rb
+                </a>
+        <br />
+                <a href="../files/temp/node_rb.html">
+                temp/node.rb
+                </a>
+        <br />
+                <a href="../files/temp/instruction_rb.html">
+                temp/instruction.rb
+                </a>
+        <br />
+                <a href="../files/temp/cdata_rb.html">
+                temp/cdata.rb
+                </a>
+        <br />
+                <a href="../files/temp/encoding_rb.html">
+                temp/encoding.rb
+                </a>
+        <br />
+                <a href="../files/temp/attribute_rb.html">
+                temp/attribute.rb
+                </a>
+        <br />
+                <a href="../files/temp/formatters/default_rb.html">
+                temp/formatters/default.rb
+                </a>
+        <br />
+                <a href="../files/temp/formatters/transitive_rb.html">
+                temp/formatters/transitive.rb
+                </a>
+        <br />
+                <a href="../files/temp/formatters/pretty_rb.html">
+                temp/formatters/pretty.rb
+                </a>
+        <br />
+                <a href="../files/temp/syncenumerator_rb.html">
+                temp/syncenumerator.rb
+                </a>
+        <br />
+                <a href="../files/temp/xpath_parser_rb.html">
+                temp/xpath_parser.rb
+                </a>
+        <br />
+                <a href="../files/temp/xmltokens_rb.html">
+                temp/xmltokens.rb
+                </a>
+        <br />
+                <a href="../files/temp/entity_rb.html">
+                temp/entity.rb
+                </a>
+        <br />
+                <a href="../files/temp/output_rb.html">
+                temp/output.rb
+                </a>
+        <br />
+                <a href="../files/temp/source_rb.html">
+                temp/source.rb
+                </a>
+        <br />
+                <a href="../files/temp/parent_rb.html">
+                temp/parent.rb
+                </a>
+        <br />
+                <a href="../files/temp/attlistdecl_rb.html">
+                temp/attlistdecl.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+-*- mode: ruby; ruby-indent-level: 2; indent-tabs-mode: t; tab-width: 2 -*-
+vim: sw=2 ts=2
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000011">&lt;&lt;</a>&nbsp;&nbsp;
+      <a href="#M000012">&lt;=&gt;</a>&nbsp;&nbsp;
+      <a href="#M000010">clone</a>&nbsp;&nbsp;
+      <a href="#M000013">doctype</a>&nbsp;&nbsp;
+      <a href="#M000009">empty?</a>&nbsp;&nbsp;
+      <a href="#M000019">indent_text</a>&nbsp;&nbsp;
+      <a href="#M000015">inspect</a>&nbsp;&nbsp;
+      <a href="#M000006">new</a>&nbsp;&nbsp;
+      <a href="#M000008">node_type</a>&nbsp;&nbsp;
+      <a href="#M000007">parent=</a>&nbsp;&nbsp;
+      <a href="#M000014">to_s</a>&nbsp;&nbsp;
+      <a href="#M000016">value</a>&nbsp;&nbsp;
+      <a href="#M000017">value=</a>&nbsp;&nbsp;
+      <a href="#M000018">wrap</a>&nbsp;&nbsp;
+      <a href="#M000020">write</a>&nbsp;&nbsp;
+      <a href="#M000022">write_with_substitution</a>&nbsp;&nbsp;
+      <a href="#M000021">xpath</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="REXML/DTD.html" class="link">REXML::DTD</a><br />
+Module <a href="REXML/Encoding.html" class="link">REXML::Encoding</a><br />
+Module <a href="REXML/EntityConst.html" class="link">REXML::EntityConst</a><br />
+Module <a href="REXML/Formatters.html" class="link">REXML::Formatters</a><br />
+Module <a href="REXML/Functions.html" class="link">REXML::Functions</a><br />
+Module <a href="REXML/Light.html" class="link">REXML::Light</a><br />
+Module <a href="REXML/Namespace.html" class="link">REXML::Namespace</a><br />
+Module <a href="REXML/Node.html" class="link">REXML::Node</a><br />
+Module <a href="REXML/Parsers.html" class="link">REXML::Parsers</a><br />
+Module <a href="REXML/SAX2Listener.html" class="link">REXML::SAX2Listener</a><br />
+Module <a href="REXML/StreamListener.html" class="link">REXML::StreamListener</a><br />
+Module <a href="REXML/Validation.html" class="link">REXML::Validation</a><br />
+Module <a href="REXML/XMLTokens.html" class="link">REXML::XMLTokens</a><br />
+Class <a href="REXML/AttlistDecl.html" class="link">REXML::AttlistDecl</a><br />
+Class <a href="REXML/Attribute.html" class="link">REXML::Attribute</a><br />
+Class <a href="REXML/Attributes.html" class="link">REXML::Attributes</a><br />
+Class <a href="REXML/CData.html" class="link">REXML::CData</a><br />
+Class <a href="REXML/Child.html" class="link">REXML::Child</a><br />
+Class <a href="REXML/Comment.html" class="link">REXML::Comment</a><br />
+Class <a href="REXML/Declaration.html" class="link">REXML::Declaration</a><br />
+Class <a href="REXML/DocType.html" class="link">REXML::DocType</a><br />
+Class <a href="REXML/Document.html" class="link">REXML::Document</a><br />
+Class <a href="REXML/Element.html" class="link">REXML::Element</a><br />
+Class <a href="REXML/ElementDecl.html" class="link">REXML::ElementDecl</a><br />
+Class <a href="REXML/Elements.html" class="link">REXML::Elements</a><br />
+Class <a href="REXML/Entity.html" class="link">REXML::Entity</a><br />
+Class <a href="REXML/ExternalEntity.html" class="link">REXML::ExternalEntity</a><br />
+Class <a href="REXML/IOSource.html" class="link">REXML::IOSource</a><br />
+Class <a href="REXML/Instruction.html" class="link">REXML::Instruction</a><br />
+Class <a href="REXML/NotationDecl.html" class="link">REXML::NotationDecl</a><br />
+Class <a href="REXML/Output.html" class="link">REXML::Output</a><br />
+Class <a href="REXML/Parent.html" class="link">REXML::Parent</a><br />
+Class <a href="REXML/ParseException.html" class="link">REXML::ParseException</a><br />
+Class <a href="REXML/QuickPath.html" class="link">REXML::QuickPath</a><br />
+Class <a href="REXML/Source.html" class="link">REXML::Source</a><br />
+Class <a href="REXML/SourceFactory.html" class="link">REXML::SourceFactory</a><br />
+Class <a href="REXML/SyncEnumerator.html" class="link">REXML::SyncEnumerator</a><br />
+Class <a href="REXML/Text.html" class="link">REXML::Text</a><br />
+Class <a href="REXML/UndefinedNamespaceException.html" class="link">REXML::UndefinedNamespaceException</a><br />
+Class <a href="REXML/XMLDecl.html" class="link">REXML::XMLDecl</a><br />
+Class <a href="REXML/XPath.html" class="link">REXML::XPath</a><br />
+Class <a href="REXML/XPathParser.html" class="link">REXML::XPathParser</a><br />
+
+    </div>
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">REFERENCE</td>
+          <td>=</td>
+          <td class="context-item-value">/#{Entity::REFERENCE}/</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">EREFERENCE</td>
+          <td>=</td>
+          <td class="context-item-value">/&amp;(?!#{Entity::NAME};)/</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">COPYRIGHT</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;Copyright ?? 2001-2008 Sean Russell &lt;ser@germane-software.com&gt;&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">DATE</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;2008/019&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">VERSION</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;3.1.7.3&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">REVISION</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;$Revision: 1304 $&quot;.gsub(/\$Revision:|\$/,'').strip</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Copyright</td>
+          <td>=</td>
+          <td class="context-item-value">COPYRIGHT</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Version</td>
+          <td>=</td>
+          <td class="context-item-value">VERSION</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000006.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000006.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(arg, respect_whitespace=false, parent=nil, raw=nil, entity_filter=nil, illegal=NEEDS_A_SECOND_CHECK )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Constructor <tt>arg</tt> if a String, the content is set to the String. If
+a <a href="REXML/Text.html">Text</a>, the object is shallowly cloned.
+</p>
+<p>
+<tt>respect_whitespace</tt> (boolean, false) if true, whitespace is
+respected
+</p>
+<p>
+<tt>parent</tt> (nil) if this is a <a href="REXML/Parent.html">Parent</a>
+object, the parent will be set to this.
+</p>
+<p>
+<tt>raw</tt> (nil) This argument can be given three values. If true, then
+the <a href="REXML.html#M000016">value</a> of used to construct this object
+is expected to contain no unescaped XML markup, and <a
+href="REXML.html">REXML</a> will not change the text. If this <a
+href="REXML.html#M000016">value</a> is false, the string may contain any
+characters, and <a href="REXML.html">REXML</a> will escape any and all
+defined entities whose values are contained in the text. If this <a
+href="REXML.html#M000016">value</a> is nil (the default), then the raw <a
+href="REXML.html#M000016">value</a> of the parent will be used as the raw
+<a href="REXML.html#M000016">value</a> for this node. If there is no raw <a
+href="REXML.html#M000016">value</a> for the parent, and no <a
+href="REXML.html#M000016">value</a> is supplied, the default is false. Use
+this field if you have entities defined for some text, and you don&#8216;t
+want <a href="REXML.html">REXML</a> to escape that text in output.
+</p>
+<pre>
+  Text.new( &quot;&lt;&amp;&quot;, false, nil, false ) #-&gt; &quot;&amp;lt;&amp;amp;&quot;
+  Text.new( &quot;&amp;lt;&amp;amp;&quot;, false, nil, false ) #-&gt; &quot;&amp;amp;lt;&amp;amp;amp;&quot;
+  Text.new( &quot;&lt;&amp;&quot;, false, nil, true )  #-&gt; Parse exception
+  Text.new( &quot;&amp;lt;&amp;amp;&quot;, false, nil, true )  #-&gt; &quot;&amp;lt;&amp;amp;&quot;
+  # Assume that the entity &quot;s&quot; is defined to be &quot;sean&quot;
+  # and that the entity    &quot;r&quot; is defined to be &quot;russell&quot;
+  Text.new( &quot;sean russell&quot; )          #-&gt; &quot;&amp;s; &amp;r;&quot;
+  Text.new( &quot;sean russell&quot;, false, nil, true ) #-&gt; &quot;sean russell&quot;
+</pre>
+<p>
+<tt>entity_filter</tt> (nil) This can be an array of entities to match in
+the supplied text. This argument is only useful if <tt>raw</tt> is set to
+false.
+</p>
+<pre>
+  Text.new( &quot;sean russell&quot;, false, nil, false, [&quot;s&quot;] ) #-&gt; &quot;&amp;s; russell&quot;
+  Text.new( &quot;sean russell&quot;, false, nil, true, [&quot;s&quot;] ) #-&gt; &quot;sean russell&quot;
+</pre>
+<p>
+In the last example, the <tt>entity_filter</tt> argument is ignored.
+</p>
+<p>
+<tt>pattern</tt> INTERNAL USE ONLY
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000011" class="method-detail">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000011.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000011.html');return false;">
+          <span class="method-name">&lt;&lt;</span><span class="method-args">( to_append )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Appends text to this text node. The text is appended in the <tt>raw</tt>
+mode of this text node.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000012.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000012.html');return false;">
+          <span class="method-name">&lt;=&gt;</span><span class="method-args">( other )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt>other</tt> a String or a <a href="REXML/Text.html">Text</a>
+<tt>returns</tt> the result of (<a href="REXML.html#M000014">to_s</a>
+&lt;=&gt; arg.to_s)
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000010.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000010.html');return false;">
+          <span class="method-name">clone</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000013" class="method-detail">
+        <a name="M000013"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000013.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000013.html');return false;">
+          <span class="method-name">doctype</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000009" class="method-detail">
+        <a name="M000009"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000009.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000009.html');return false;">
+          <span class="method-name">empty?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000019.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000019.html');return false;">
+          <span class="method-name">indent_text</span><span class="method-args">(string, level=1, style=&quot;\t&quot;, indentfirstline=true)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000015" class="method-detail">
+        <a name="M000015"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000015.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000015.html');return false;">
+          <span class="method-name">inspect</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000008.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000008.html');return false;">
+          <span class="method-name">node_type</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000007.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000007.html');return false;">
+          <span class="method-name">parent=</span><span class="method-args">(parent)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000014" class="method-detail">
+        <a name="M000014"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000014.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000014.html');return false;">
+          <span class="method-name">to_s</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the string <a href="REXML.html#M000016">value</a> of this text
+node. This string is always escaped, meaning that it is a valid XML text
+node string, and all entities that can be escaped, have been inserted. This
+method respects the entity filter set in the constructor.
+</p>
+<pre>
+  # Assume that the entity &quot;s&quot; is defined to be &quot;sean&quot;, and that the
+  # entity &quot;r&quot; is defined to be &quot;russell&quot;
+  t = Text.new( &quot;&lt; &amp; sean russell&quot;, false, nil, false, ['s'] )
+  t.to_s   #-&gt; &quot;&amp;lt; &amp;amp; &amp;s; russell&quot;
+  t = Text.new( &quot;&lt; &amp; &amp;s; russell&quot;, false, nil, false )
+  t.to_s   #-&gt; &quot;&amp;lt; &amp;amp; &amp;s; russell&quot;
+  u = Text.new( &quot;sean russell&quot;, false, nil, true )
+  u.to_s   #-&gt; &quot;sean russell&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000016" class="method-detail">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000016.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000016.html');return false;">
+          <span class="method-name">value</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the string <a href="REXML.html#M000016">value</a> of this text.
+This is the text without entities, as it might be used programmatically, or
+printed to the console. This ignores the &#8216;raw&#8217; attribute
+setting, and any entity_filter.
+</p>
+<pre>
+  # Assume that the entity &quot;s&quot; is defined to be &quot;sean&quot;, and that the
+  # entity &quot;r&quot; is defined to be &quot;russell&quot;
+  t = Text.new( &quot;&lt; &amp; sean russell&quot;, false, nil, false, ['s'] )
+  t.value   #-&gt; &quot;&lt; &amp; sean russell&quot;
+  t = Text.new( &quot;&lt; &amp; &amp;s; russell&quot;, false, nil, false )
+  t.value   #-&gt; &quot;&lt; &amp; sean russell&quot;
+  u = Text.new( &quot;sean russell&quot;, false, nil, true )
+  u.value   #-&gt; &quot;sean russell&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000017" class="method-detail">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000017.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000017.html');return false;">
+          <span class="method-name">value=</span><span class="method-args">( val )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the contents of this text node. This expects the text to be
+unnormalized. It returns self.
+</p>
+<pre>
+  e = Element.new( &quot;a&quot; )
+  e.add_text( &quot;foo&quot; )   # &lt;a&gt;foo&lt;/a&gt;
+  e[0].value = &quot;bar&quot;    # &lt;a&gt;bar&lt;/a&gt;
+  e[0].value = &quot;&lt;a&gt;&quot;    # &lt;a&gt;&amp;lt;a&amp;gt;&lt;/a&gt;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000018" class="method-detail">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000018.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000018.html');return false;">
+          <span class="method-name">wrap</span><span class="method-args">(string, width, addnewline=false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000020.html');return false;">
+          <span class="method-name">write</span><span class="method-args">( writer, indent=-1, transitive=false, ie_hack=false )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <h2>DEPRECATED</h2>
+<p>
+See <a href="REXML/Formatters.html">REXML::Formatters</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000022.html');return false;">
+          <span class="method-name">write_with_substitution</span><span class="method-args">(out, input)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Writes out text, substituting special characters beforehand. <tt>out</tt> A
+String, IO, or any other object supporting &lt;&lt;( String )
+<tt>input</tt> the text to substitute and the <a
+href="REXML.html#M000020">write</a> out
+</p>
+<pre>
+  z=utf8.unpack(&quot;U*&quot;)
+  ascOut=&quot;&quot;
+  z.each{|r|
+    if r &lt;  0x100
+      ascOut.concat(r.chr)
+    else
+      ascOut.concat(sprintf(&quot;&amp;#x%x;&quot;, r))
+    end
+  }
+  puts ascOut
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+          <a href="REXML.src/M000021.html" target="Code" class="method-signature"
+            onclick="popupCode('REXML.src/M000021.html');return false;">
+          <span class="method-name">xpath</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+FIXME This probably won&#8216;t work properly
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
