@@ -17,8 +17,12 @@ puts g.command 'branch'
 remotes = g.remotes
 remote = g.remote 'origin'
 puts "Remote repository is #{remote.url}"
-r = Git.open remo
+r = Git.bare remo
+r.set_working remote.url
 puts r
+puts r.dir
+puts r.repo
+puts r.command 'fsck'
 
 # g.command 'gc'
 
