@@ -1,0 +1,4 @@
+foo.caller
+foo.arguments
+arguments.caller
+arguments.callee
