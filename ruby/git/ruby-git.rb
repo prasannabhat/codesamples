@@ -4,8 +4,9 @@ require 'ap'
 require 'pp'
 
 
-repo = "E:/gitrepos/Testing/jquery-mobile"
-remo = "E:/gitrepos/Testing/bare"
+#repo = "E:/gitrepos/Testing/jquery-mobile"
+repo = "D:/gitrepos/BCTRepos/Dev_ComStack_Ar40"
+#remo = "E:/gitrepos/Testing/bare"
 g = Git.open repo
 
 #puts g.log
@@ -17,12 +18,11 @@ puts g.command 'branch'
 remotes = g.remotes
 remote = g.remote 'origin'
 puts "Remote repository is #{remote.url}"
-r = Git.bare remo
-r.set_working remote.url
+r = Git.bare remote.url
+#r.set_working remote.url
 puts r
-puts r.dir
-puts r.repo
-puts r.command 'fsck'
+puts "Remote path is #{r.repo}"
+puts r.command 'branch'
 
 # g.command 'gc'
 
