@@ -1,6 +1,7 @@
 
 #!/usr/bin/ruby -w
 
+require 'rubygems'
 require 'rexml/document'
 include REXML
 
